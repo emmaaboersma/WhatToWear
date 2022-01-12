@@ -1,0 +1,11 @@
+make WhatToWear --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/emmaboersma/Desktop/weather_app'
+clang++ -g3 -Wall -Wextra -std=c++11  -c main.cpp
+clang++ -g3 -Wall -Wextra -std=c++11  -c Weather.cpp
+clang++ -g3 -Wall -Wextra -std=c++11  -c Outfit.cpp
+clang++ -g3 -Wall -Wextra -std=c++11  -c Warmth.cpp
+clang++ -g3 -Wall -Wextra -std=c++11  -c WhatToWear.cpp
+clang++ -o WhatToWear main.o Weather.o Outfit.o Warmth.o WhatToWear.o
+ 
+make: Leaving directory `/Users/emmaboersma/Desktop/weather_app'
+ 

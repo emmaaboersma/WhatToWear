@@ -1,0 +1,30 @@
+/**********************************************************
+* WhatToWear
+* README
+* Emma Boersma
+* 1/1/22
+*********************************************************/
+
+Testing:
+
+
+----------------------------------
+main.cpp
+
+made Weather object and called all the getters to check that default
+constructor set all the values to 0.
+result: all set to zero
+
+next, use all the setters on the same weather object. then call the
+getters again to check values are being updated. ran through all possible
+dayType and precipitation types as well.
+result: as expected
+
+
+made Outfit object and called all the getters
+result: as expected
+
+
+testing Warmth class:
+make Weather object and set parameters then call get_weatherWarmth.
+in get_weatherWarmth is a cout of the warmth_points.

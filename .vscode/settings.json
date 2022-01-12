@@ -1,0 +1,10 @@
+{
+    "makefile.extensionOutputFolder": "./.vscode",
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/Users/emmaboersma/Desktop/weather_app",
+            "binaryPath": "/Users/emmaboersma/Desktop/weather_app/WhatToWear",
+            "binaryArgs": []
+        }
+    ]
+}

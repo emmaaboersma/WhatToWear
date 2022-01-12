@@ -5,6 +5,85 @@
 * 1/1/22
 *********************************************************/
 
+Purpose:
+
+Take in data from user about weather conditions. Generates
+suggestions for what to wear based on these conditions.
+
+Works by converting these weather conditions -- current
+temperature, wind speed, type of day, precipitation --
+into an overal value of warmth, 0 being the coldest, 25
+being the hottest. Various clothing options
+are each assigned their own warmth value.
+Combinations of clothes are suggested when the overall
+warmth value is within 3 points of the weather's warmth
+value. 
+
+
+***********************************************************
+
+Files:
+
+Weather.h Weather.cpp
+    Header and implementation of Weather class. Used to
+    assign weather data and return weather data.
+Outfit.h Outfit.cpp
+    Header and implementation of Outfit class. Contains
+    various clothes and their warmth values.
+Warmth.h Warmth.cpp
+    Header and implementation of Warmth Class. Creates
+    the rules for which clothes are suggested based on
+    the weather conditions.
+WhatToWear.h WhatToWear.cpp
+    Header and implementation of WhatToWear class, which
+    runs the overall program.
+main.cpp
+    Calls WhatToWear to be run.
+Makefile
+    Makes and links executables.
+
+***********************************************************
+
+Compiling:
+    make [WhatToWear]
+
+Running:
+    ./WhatToWear
+
+***********************************************************
+
+Data Structures:
+
+I used structs in the Weather and Outfit classes to
+organize all of their respective data into one package.
+The Weather class had a Day struct, which just held
+the current temperature, the wind speed, the day type,
+and the precipitation. This was a private struct to
+help implement the getters and setters. The Outfit
+struct, Clothes, however, was public. It also helped
+with the getters and setters, but I also used it in
+the Warmth class to calculate the warmth values.
+
+In the Warmth class, I used vectors to store the
+different options for shoes, pants, shirts, and
+jackets. Vectors were a good choice because they
+can be dynamically allocated. So depending on the
+weather, different types of clothing could be added:
+I wasn't committed to a specific number of options.
+
+Algorithms:
+
+I used various classes--Weather, Outfit, and Warmth--
+classes to organize the different types of data I was
+working with. Using getters and setters from the Weather
+and Outfit classes allowed me to calculate warmth values
+in the Warmth class cleanly. Once the warmth values for
+the weather and the outfits were calculated, all I
+had to do in the WhatToWear class was create prompts in
+the commandline. 
+
+***********************************************************
+
 Testing:
 
 
@@ -28,3 +107,29 @@ result: as expected
 testing Warmth class:
 make Weather object and set parameters then call get_weatherWarmth.
 in get_weatherWarmth is a cout of the warmth_points.
+
+***********************************************************
+
+BUGS:
+Segmentation fault for WhatToWear executable. Not fixed yet.
+
+***********************************************************
+
+Future Additions:
+Weather is imported directly from the internet instead of
+being inputted from users.
+
+Takes into account different activities, for example:
+  - exercise
+  - sitting outside vs. walking outside
+
+Takes into account humidity.
+
+Algorithm where users can say whether the suggested outfit
+was too warm or too cold for the weather that day.
+
+
+
+
+
+
